@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<odoo>
+    
+    <!-- inherit form view for res_partner -->
+
+    <record id="customer_inherited" model="ir.ui.view">
+        <field name="name">customer form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="property_payment_method_id" position="after">
+                <field name="credit_limit"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
