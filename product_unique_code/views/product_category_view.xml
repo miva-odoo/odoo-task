@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- inherit form view for product.template -->
+
+    <record id="product_category_inherited" model="ir.ui.view">
+        <field name="name">product category</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+           
+            <field name='removal_strategy_id'  position="after">
+                <field name="assign_sequence"/>
+            </field>
+        </field>
+   </record>
+
+</odoo>
