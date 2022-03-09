@@ -15,9 +15,7 @@
                 </t>    
             </xpath>
 
-            <xpath expr="//div/div[@class='test']" position="insite">
-                <div id="test-subtest" attrs="invis">  
-            </xpath>   
+              
         </field>    
    </record>
    
