@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- inherit form report for account_report_invoice_with_payments_report -->
+
+    <template id="report_invoice_with_payments_report" inherit_id="account.report_invoice_document">
+        <xpath expr="//th[@name='th_taxes']" position="before">
+                <th class="text-right">2nd Disc. %</th>
+        </xpath>
+        <xpath expr="//td[@t-if='display_discount']" position="after">
+             <td  class="text-right">
+                <span t-field="line.second_discount"/>
+             </td>   
+        </xpath>                    
+    </template>
+
+
+</odoo>
