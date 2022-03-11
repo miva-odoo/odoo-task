@@ -31,8 +31,7 @@ class SaleOrder(models.Model):
      for record in self:
          if not record.zero_stock_approval:
              raise UserError ("Approval are not True pls first true approual")
-         else:
-             return super(SaleOrder, self).action_confirm()
+         return super(SaleOrder, self).action_confirm()
 
     @api.depends('zero_stock_approval')
     def _compute_user_group(self) :     
