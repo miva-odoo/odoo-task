@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<odoo>
+    
+    <!-- inherit form view for res_partner -->
+
+    <record id="person_inherited" model="ir.ui.view">
+        <field name="name">person form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='internal_notes']" position="after">
+                <page name="inventory" string="Inventory">
+                     <field name="partner_wise_uoms_id" string='Product uom'>
+                        <tree editable='bottom'>
+                            <field name='category_uom_ids' invisible="1" />
+                            <field name='product_id'/>
+                            <field name='uom_id'/>
+                        </tree>
+                     </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
