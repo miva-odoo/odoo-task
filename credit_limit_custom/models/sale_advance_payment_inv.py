@@ -11,7 +11,5 @@ class SaleAdvancePaymentInv(models.TransientModel):
 
     def  _prepare_invoice_values(self):
          if self.amount_total > self.partner_id.credit_limit: 
-             print('+++++++++++++++++++++++++++++++++++') 
-             raise UserError ("Total tax is greater than the credit limit")
-         else:     
-             return super(SaleAdvancePaymentInv, self)._prepare_invoice_values()
+             raise UserError ("Total tax is greater than the credit limit")  
+         return super(SaleAdvancePaymentInv, self)._prepare_invoice_values()

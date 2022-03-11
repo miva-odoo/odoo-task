@@ -9,9 +9,8 @@ class AccountMove(models.Model):
 
     def action_post(self):
          if self.amount_total > self.partner_id.credit_limit:  
-             raise UserError ("Total tax is greater than the credit limit")
-         else:     
-             return super(AccountMove, self).action_post()
+             raise UserError ("Total tax is greater than the credit limit")   
+         return super(AccountMove, self).action_post()
 
   
  
