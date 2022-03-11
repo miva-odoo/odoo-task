@@ -35,7 +35,6 @@
         <field name="binding_model_id" ref="mrp_workorder.model_mrp_workorder"/>
         <field name="state">code</field>
         <field name="code">
-            for rec in records:
                     rec.button_finish()
         </field>
     </record>
