@@ -1,5 +1,5 @@
 {
-#imfromation
+#infromation
     
  'name':'Sale Stock Approval',
  'version': '15.0',

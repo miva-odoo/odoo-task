@@ -41,7 +41,12 @@ class SaleOrder(models.Model):
             self.bool_approval = False
 
 
-
+    
+    
+    
+   
+   
+               
 
 
 
