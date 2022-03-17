@@ -16,6 +16,7 @@
  'depends': ['website','sale_management','website_sale',],
  'data': [
      'views/sale_order_protal_template.xml',
+     'data/email_template_data.xml',
     
  ],
 
