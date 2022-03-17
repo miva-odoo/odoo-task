@@ -1,5 +1,5 @@
 {
-#infromation
+#information
     
  'name':'Stock Aageing Costomization',
  'version':'15.0',

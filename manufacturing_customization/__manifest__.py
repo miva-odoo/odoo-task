@@ -1,5 +1,5 @@
 {
-#imfromation
+#information
     
  'name':'Manufecturing Customization',
  'version': '15.0',

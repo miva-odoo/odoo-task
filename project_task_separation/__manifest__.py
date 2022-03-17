@@ -1,5 +1,5 @@
 {
-#imfromation
+#information
     
  'name':'Task Sepration',
  'version': '15.0',

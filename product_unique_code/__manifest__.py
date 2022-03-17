@@ -1,5 +1,5 @@
 {
-#imfromation
+#information
     
  'name':'Product Unique Code',
  'version': '15.0',

@@ -1,5 +1,5 @@
 {
-#imfromation
+#information
     
  'name':'Second Discount',
  'version':'15.0',

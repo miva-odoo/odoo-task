@@ -1,5 +1,5 @@
 {
-#imfromation
+#information
     
  'name':'Credit Limit Custom',
  'version': '15.0',

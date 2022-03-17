@@ -1,5 +1,5 @@
 {
-#imfromation
+#information
     
  'name':'Sales Order and Invoice',
  'version': '15.0',

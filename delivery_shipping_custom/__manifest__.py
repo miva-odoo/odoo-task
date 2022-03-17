@@ -1,5 +1,5 @@
 {
-#imfromation
+#information
     
  'name':'Delivery Shipping Sale',
  'version':'15.0',
