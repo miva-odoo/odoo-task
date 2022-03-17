@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="saleorder_template" inherit_id= "sale.portal_my_orders">
+        <xpath expr="//td[last()]" position="after">
+            <td>
+                <a class="btn btn-primary" t-att-href="'/reorder?order_id=%s' % order.id" role="button">Reorder</a>
+            </td>
+        </xpath>
+    </template>
+</odoo>
