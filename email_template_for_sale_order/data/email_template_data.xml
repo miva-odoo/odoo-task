@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-
     <data>
         <record id="email_template_edi_sale" model="mail.template">
                     <field name="name">Sales Order Custom: Send by email</field>
@@ -22,8 +21,7 @@
                         </div>
                     </field>
                     <!-- <field name="report_template" ref="action_report_saleorder"/> -->
-                    <field name="report_name">{{ (object.name or '').replace('/','_') }}</field>
-                    
+                    <field name="report_name">{{ (object.name or '').replace('/','_') }}</field>            
       </record>
     </data>
   </odoo>    
