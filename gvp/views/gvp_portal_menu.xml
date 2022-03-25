@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+
+    <record id="profile_person" model="ir.actions.act_window">
+        <field name="name">Person</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        
+    </record>
+
+    <menuitem id="gvp_root_menu" name="GVP Alumni Association"/> 
+    <menuitem id="gvp_third_menu" name="Person" parent="gvp_root_menu" action="profile_person"/>
+   
+  
+    
+</odoo>
