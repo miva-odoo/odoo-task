@@ -14,8 +14,6 @@ class StockPicking(models.Model):
 
     requested_date = fields.Datetime(string="Appointment Date")
 
-
-
     #------------------------
     # method declaration
     #-------------------------

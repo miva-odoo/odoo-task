@@ -1,3 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from . import res_partner,sale_order,stock_picking
+from . import res_partner
+from . import sale_order
+from . import stock_picking
