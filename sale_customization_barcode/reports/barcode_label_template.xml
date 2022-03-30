@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <template id="report_custom_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                  
+                        <div class="oe-structure"/>
+                         <div class="row">
+                            <div class="col-xs-2" style="margin:auto;">
+                            </div>
+                            <center>
+                                <table class="table table-bordered mb-0" style="border:2px solid black;">
+
+                                    <tr>
+                                        <td>
+                                            <span t-field="doc.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle" style="height: 6rem">
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', docs.barcode_print, 200, 100)" style="width:200px;height:30px;"/><br></br>
+                                            <span t-field="doc.barcode_print"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </center>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+ 
+
+</odoo>
