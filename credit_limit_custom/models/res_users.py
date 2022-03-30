@@ -7,7 +7,7 @@ class ResUser(models.Model):
     _inherit='res.users'
 
     #----------------------------
-    #  fields Declaration
+    #  method Declaration
     #---------------------------
 
 

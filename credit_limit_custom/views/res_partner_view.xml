@@ -8,10 +8,9 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <field name="property_payment_method_id" position="after">
+            <xpath expr="//field[@name='team_id']" position="before">
                 <field name="credit_limit"/>
-            </field>
+            </xpath>
         </field>
     </record>
-
 </odoo>
