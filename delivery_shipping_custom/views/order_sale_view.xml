@@ -8,9 +8,12 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
-            <field name="picking_policy" position="after">
+            <!-- <field  position="after">
                 <field name="requested_date"/>
-            </field>
+            </field> -->
+            <xpath expr="//field[@name='picking_policy']" position="after">
+                <field name="requested_date"/>
+            </xpath>
         </field>
    </record>
 
