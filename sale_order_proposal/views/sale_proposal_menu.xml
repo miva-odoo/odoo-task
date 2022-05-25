@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+ <!-- sale_proposal_ form view -->
+
+
+     <record id="action_orders_proposale" model="ir.actions.act_window">
+            <field name="name">Sales Proposal</field>
+            <field name="res_model">sale.proposal</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="sale_order_proposale"
+                    name="Sale Proposal"
+                    parent="sale.sale_order_menu"
+                  action ="action_orders_proposale"
+                  sequence="4"
+            />
+
+</odoo>

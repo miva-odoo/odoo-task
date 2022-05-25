@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+custom_wizard_for_sale.access_confirm_order,access_confirm_order,custom_wizard_for_sale.model_confirm_order,base.group_user,1,1,1,1
+
+
+

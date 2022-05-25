@@ -1,0 +1,22 @@
+<odoo>
+
+    <template id="edit_education" name="Edit Education">
+        <t t-call="portal.portal_layout">
+            <form action="/my/submit/educataion" id="education_edit_form" class="mt-2">
+                <input type="hidden" name="my_education" />
+                <div class="form-group">
+                    <label for="educations">Education:</label>
+                    <select class="w-75" id="educations" name="education" multiple="True">
+                        <option t-foreach="educations" t-as="education" t-att-value="education.id" t-att-selected="education in partner.education_ids">
+                            <t t-esc="education.name" />
+                        </option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button class="btn btn-secondary o_reset_educations">Reset</button>
+                <a class="btn btn-secondary" href="/my">Cancel</a>
+            </form>
+        </t>
+    </template>
+    
+</odoo>

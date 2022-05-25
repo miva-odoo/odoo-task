@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="partner_ledger_report_template">
+        <t t-call="web.html_container">
+            <t t-set="company" t-value="env.company"/>
+            <t t-call="web.basic_layout">
+                <div class="text-center">
+                    <div t-field="company.partner_id" t-options='{"widget" : "contact" , "fields" : ["address" , "name"] , "no_marker" : true}'/>
+                </div>
+                <t t-foreach="docs" t-as="doc">
+                    <div class="text-center mt-3">
+                        <div t-field="doc.partner_id" t-options='{"widget" : "contact" , "fields" : ["address" , "name"] , "no_marker" : true}'/>
+                    </div>
+                <div>
+                    <!-- <t t-set="sale_id" t-value="o.get_sale_order_ref()"/> -->
+                    <table class="table table-sm o_main_table mt-3 table-borderless">
+                        <t t-set="lines" t-value="doc.line_ids"/>
+                        <tbody class="border-top">
+                            <tr class="border-bottom">
+                                <td>
+                                    Date
+                                </td>
+                                <td>
+                                    Particulars
+                                </td>
+                                <td>
+                                    Vch Type
+                                </td>
+                                <td>
+                                    Vch No.
+                                </td>
+                                <td>
+                                    Debit
+                                </td>
+                                <td>
+                                    Credit
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Opening Balance
+                                </td>
+                                <td>
+                                    <!-- <span t-field="lines.balance[1]" /> -->
+                                </td>
+                            </tr>
+                            <t t-foreach="lines" t-as="line">
+
+                            <tr>
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <span t-field="doc.name" />
+                                </td>
+                                <td>
+                                    <span t-field="line.debit" />
+                                </td>
+                                <td>
+                                    <span t-field="line.credit" />
+                                </td>
+                            </tr>
+                        </t>
+
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+
+            </t>
+        </t>
+    </template>
+
+</odoo>

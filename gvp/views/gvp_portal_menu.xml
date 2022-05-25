@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   
-
+    <!-- manu for GVP Profile -->
+    
     <record id="profile_person" model="ir.actions.act_window">
-        <field name="name">Person</field>
+        <field name="name">User Regitration</field>
         <field name="res_model">res.partner</field>
-        <field name="view_mode">tree,form</field>
-        
+        <field name="view_mode">tree,form</field>  
     </record>
 
-    <menuitem id="gvp_root_menu" name="GVP Alumni Association"/> 
-    <menuitem id="gvp_third_menu" name="Person" parent="gvp_root_menu" action="profile_person"/>
+    <menuitem id="gvp_root_menu" name="Gujarat Vidyapith Computer Science Alumni Association"/> 
+    <menuitem id="gvp_third_menu" name="User Regitration" parent="gvp_root_menu" action="profile_person"/>
    
   
     

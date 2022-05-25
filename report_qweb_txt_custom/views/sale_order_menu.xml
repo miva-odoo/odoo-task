@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+ <record id="action_order_details" model="ir.actions.act_window">
+        <field name="name">Sale Details Wizard Form</field>
+        <field name="res_model">sale.details.wizard</field>
+        <field name="view_mode">form</field>
+     <field name="target">new</field>
+    </record>
+
+
+    <menuitem id="menu_report_product_all"
+            name="Sales Details"
+            action="action_order_details"
+            parent="sale.menu_sale_report"
+            sequence="1"/>
+
+</odoo>
+

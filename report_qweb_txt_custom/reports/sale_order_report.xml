@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_sale_order_txt">
+        ID|Number|Invoice/Bill Date|Invoice Partner Display Name|Partner/Street|Partner/Street2|Partner/City|Partner/TIN Number|GSTIN|Partner/Mobile|Partner/Email|GST Treatment|Invoice Lines/Product/Barcode|Invoice Lines/Prosuct|Invoice Lines/Unit Of Measure|Invoice Lines/Currency|Invoice Lines/Quantity|Invoice Lines/Unit Price|Invoice Lines/Total|Invoice lines/Product/HSN/SAC Code|Invoice lines/Taxes
+        <!-- <t t-foreach="docs" t-as="o">
+            <t t-esc="o.ID"/>
+            <t t-esc="o.Number"/>
+            <t t-esc="o.Invoice/Bill Date"/>
+            <t t-esc="o.Invoice Partner Display Name"/>
+            <t t-esc="o.IPartner/Street"/>
+            <t t-esc="o.Partner/Street2"/>
+            <t t-esc="o.Partner/City"/>
+            <t t-esc="o.Partner/TIN Number"/>
+            <t t-esc="o.GSTIN"/>
+            <t t-esc="o.Partner/Mobile"/>
+            <t t-esc="o.Partner/Email"/>
+            <t t-esc="o.GST Treatment"/>
+            <t t-esc="o.Invoice Lines/Product/Barcode"/>
+            <t t-esc="o.Invoice Lines/Prosuct"/>
+            <t t-esc="o.Invoice Lines/Unit Of Measu"/>
+            <t t-esc="o.Invoice Lines/Currency"/>
+            <t t-esc="o.Invoice Lines/Quantity"/>
+            <t t-esc="o.Invoice Lines/Unit Price"/>
+            <t t-esc="o.Invoice Lines/Total"/>
+            <t t-esc="o.Invoice lines/Product/HSN/SAC Code"/>
+            <t t-esc="o.|Invoice lines/Taxes"/>
+
+        </t> -->
+        </template>
+</odoo>

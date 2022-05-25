@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Inhetit stock.location From View -->
+    <record id="stock_locationr_form_inherit_delivery" model="ir.ui.view">
+        <field name="name">stock.location</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='removal_strategy_id']" position="after">
+                <field name="is_saleable"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

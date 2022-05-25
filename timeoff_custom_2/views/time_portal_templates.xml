@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_home_person_details" name="Person Details" inherit_id="portal.portal_my_home">
+        <xpath expr="//div[@class='o_portal_my_home']" position="after">
+            <!-- <a class="list-group-item list-group-item-action d-flex align-items-center justify-content-between" href="/my/timeoff" title="TimeOff">
+                TimeOff 
+               
+            </a> -->
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">TimeOff </t>
+                <t t-set="url" t-value="'/my/timeoff'"/>
+                <t t-set="placeholder_count" t-value="'leave_count'"/>
+            </t>
+        </xpath>
+    </template>
+    <template id="portal_my_timeoff_details" name="My TimeOff">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">My TimeOff</t>
+            </t>
+            <t t-if="res" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th class="text-right">Time Off</th>
+                        <th class="text-right">Description</th>
+                        <th class="text-right">Start Date</th>
+                        <th class="text-right">End Date</th>
+                        <th class="text-right">Duration</th>
+                        <th class="text-right">Status</th>
+                    </tr>
+                </thead>
+                <t t-foreach="res" t-as="r">
+                    <tr>
+                        <td class="text-right"><span t-field="r.holiday_status_id.name"/></td>
+                        <td class="text-right"><span t-field="r.name"/></td>
+                        <td class="text-right"><span t-field="r.date_from"/></td>
+                        <td class="text-right"><span t-field="r.date_to"/></td>
+                        <td class="text-right"><span t-field="r.duration_display"/></td>
+                        <td class="text-right"><span t-field="r.state"/></td>
+                    </tr>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

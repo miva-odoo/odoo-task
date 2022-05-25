@@ -3,6 +3,7 @@
   
 
 <!-- education form view -->
+
   <record id="education_form_view" model="ir.ui.view">
     <field name="name">Education</field>
     <field name="model">education</field>

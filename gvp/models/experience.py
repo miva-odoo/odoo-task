@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 from odoo import models, fields
 
 class GvpEducation(models.Model):
@@ -10,7 +9,7 @@ class GvpEducation(models.Model):
     #  fields Declaration
     #---------------------------
 
-    employee_id = fields.Many2one('res.partner')
+    partner_id = fields.Many2one('res.partner')
     title = fields.Char('Experience Title')
     employee_type = fields.Char('Employee Type')
     employee_name = fields.Char('Employee Name')

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="model_partner_ledger_menu"
+    name="Partner Ledger Report"
+    parent="account_reports.account_reports_partners_reports_menu"
+    sequence="2"
+    action="partner_ledger_report_customization.action_partner_ledger_report_view" />
+</odoo>

@@ -53,7 +53,7 @@
                     </div>
                 </div>
             
-                <div class="card mt8">
+                <div class="card mt8" id="exp">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
@@ -62,8 +62,7 @@
                                 </div>
                                 <div class='d-flex justify-content-between align-items-center'>
                                     <h3 class="card-title">Experience</h3>
-                                    <!-- <i class="fas fa-edit">edit</i> -->
-                                    <a href="">
+                                    <a href="#" id="edit_gvp_ex">
                                         <i class="fa fa-pencil mx-1" />
                                         Edit Experience
                                     </a>
@@ -127,7 +126,7 @@
                                 </div>
                                 <div class='d-flex justify-content-between align-items-center'>
                                     <h3 class="card-title">Skills</h3>
-                                    <a href="/my/edit/skills">
+                                    <a href="#" id="edit_gvp_skills" >
                                         <i class="fa fa-pencil mx-1" />
                                         Edit Skill
                                     </a>
@@ -135,19 +134,11 @@
                             </div>
                         </div>
                         <hr class="mt0" t-if="partner.skills_ids" />
-                        <div t-attf-class="row ml4">
-                            <t t-foreach="partner.skills_ids" t-as="skill" t-if="skill.name != ''">
-                                <h4 class="mr4">
-                                    <span class="badge badge-secondary">
-                                        <a t-if="myDetails" href="#" class="fa fa-sm fa-remove badge-secondary o_alumni_remove_skill" role="button" aria-label="Remove" title="Remove" t-att-data-id="skill.skill_id.id" />
-                                        <t t-esc="skill.name" />
-                                    </span>
-                                </h4>
-                            </t>
-                        </div>
+                                    <div class="row skills_container"/>
+
                     </div>
                 </div>
-                <div class="card mt8">
+                <div class="card mt8" id="education">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
@@ -156,9 +147,9 @@
                                 </div>
                                 <div class='d-flex justify-content-between align-items-center'>
                                     <h3 class="card-title">Education</h3>
-                                    <a href="">
+                                    <a href="#" id="edit_gvp_education">
                                         <i class="fa fa-pencil mx-1" />
-                                        Edit Education
+                                        Edit Education 
                                     </a>
                                 </div>
                             </div>
@@ -210,20 +201,171 @@
                         </t>
                     </div>
                 </div>
+                <div class="card mt8" id="publication">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div t-if="myDetails" class="float-left mr4 mt4 o_add_alumni_experience" style="cursor:pointer;" t-att-data-partnerID="partner.id">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <div class='d-flex justify-content-between align-items-center'>
+                                    <h3 class="card-title">Publication</h3>
+                                    <a href="#" id="edit_gvp_pub">
+                                        <i class="fa fa-pencil mx-1" />
+                                        Edit Publication
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt0" t-if="partner.publication_ids" />
+                        <t t-set="pub_nbr" t-value="len(partner.publication_ids)" />
+                        <t t-foreach="partner.publication_ids" t-as="pub">
+                            <t t-set="pub_nbr" t-value="pub_nbr -1" />
+                            <div class="row">
+                                <div class="col-8 col-md-10">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div t-if="myDetails" class="o_edit_alumni_publication float-left mr8" style="cursor:pointer;" t-att-data-id="pub.id">
+                                                <i class="fa fa-pencil"></i>
+                                            </div>
+                                            <t t-if="pub.discription">
+                                                <h5 class="mb4">
+                                                    <t t-esc="pub.discription" />
+                                                </h5>
+                                            </t>
+                                        </div>
+                                        <div t-attf-class="row #{'ml4' if myDetails else ''}">
+                                            <div class="col-12 ml16">
+<!--                                                <t t-if="exp.industry_name">-->
+<!--                                                    <span class="card-subtitle mb4">-->
+<!--                                                        <t t-esc="exp.industry_name" />-->
+<!--                                                    </span>-->
+<!--                                                </t>-->
+                                                <p class="card-title text-muted mb4">
+                                                    <t t-if="pub.author">
+                                                        <t t-esc="pub.author" />
+                                                    </t>
+                                                    <t t-if="pub.name">
+                                                        <t t-esc="pub.name" />
+                                                    </t>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr t-if="pub_nbr &gt; 0" class="mt0" />
+                        </t>
+                    </div>
+                </div>
+                <div class="card mt8" id="vol_experience">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div t-if="myDetails" class="float-left mr4 mt4 o_add_alumni_vol_experience" style="cursor:pointer;" t-att-data-partnerID="partner.id">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <div class='d-flex justify-content-between align-items-center'>
+                                    <h3 class="card-title">Volunteer Experience</h3>
+                                    <a href="#" id="edit_gvp_vol">
+                                        <i class="fa fa-pencil mx-1" />
+                                        Edit Volunteer Experience
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt0" t-if="partner.volunteer_experience_ids" />
+                        <t t-set="vol_nbr" t-value="len(partner.volunteer_experience_ids)" />
+                        <t t-foreach="partner.volunteer_experience_ids" t-as="vol">
+                            <t t-set="vol_nbr" t-value="vol_nbr -1" />
+                            <div class="row">
+                                <div class="col-8 col-md-10">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div t-if="myDetails" class="o_edit_alumni_vol_experience float-left mr8" style="cursor:pointer;" t-att-data-id="vol.id">
+                                                <i class="fa fa-pencil"></i>
+                                            </div>
+<!--                                            <t t-if="vol.discription">-->
+<!--                                                <h5 class="mb4">-->
+<!--                                                    <t t-esc="vol.discription" />-->
+<!--                                                </h5>-->
+<!--                                            </t>-->
+                                              <t t-if="vol.role">
+                                                <h5 class="mb4">
+                                                    <t t-esc="vol.role" />
+                                                </h5>
+                                            </t>
+                                        </div>
+                                        <div t-attf-class="row #{'ml4' if myDetails else ''}">
+                                            <div class="col-12 ml16">
+                                                <t t-if="vol.start_date">
+                                                    <span class="card-subtitle mb4">
+                                                        <t t-esc="vol.start_date" />
+                                                    </span>
+                                                </t>
+                                                <p class="card-title text-muted mb4">
+                                                    <t t-if="vol.end_date">
+                                                        <t t-esc="vol.end_date" />
+                                                    </t>
+                                                    <t t-if="vol.name">
+                                                        <t t-esc="vol.name" />
+                                                    </t>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr t-if="vol_nbr &gt; 0" class="mt0" />
+                        </t>
+                    </div>
+                </div>
             </div>
+
+
         </xpath>
     </template>
 
     <template id="edit_skills" name="Edit Skills">
         <t t-call="portal.portal_layout">
-            <form action="/my/submit/skills">
-                Skills:
-                <select id="mySkills" name="skills" multiple="True">
-                    <option t-foreach="skills" t-as="skill" t-att-value="skill.id" t-att-selected="skill in partner.skills_ids"><t t-esc="skill.name"/></option>
-                </select>
-                <button type="submit">Submit</button>
+            <form action="/my/submit/skills" id="skill_edit_form" class="mt-2">
+                <input type="hidden" name="my_skills"/>
+                <div class="form-group">
+                    <label for="mySkills">Skills:</label>
+                    <select class="w-75" id="mySkills" name="skills" multiple="True">
+                        <option t-foreach="skills" t-as="skill" t-att-value="skill.id" t-att-selected="skill in partner.skills_ids"><t t-esc="skill.name"/></option>
+                    </select>
+                  </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button class="btn btn-secondary o_reset_skills">Reset</button>
+                <a class="btn btn-secondary" href="/my">Cancel</a>
             </form>
-            
         </t>
     </template>
+
+    <template id="education_list" name="Education List">
+        <t t-call="portal.portal_layout">
+            <table class="w-100" border="2">
+                <thead>
+                    <tr>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Year Start</th>
+                        <th class="text-center">Year End</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="educations" t-as="edu">
+                        <td t-esc="edu.name"/>
+                        <td t-esc="edu.start_date"/>
+                        <td t-esc="edu.end_date"/>
+                        <td><a t-att-href="'/my/edit/education/%s' % edu.id" class="fa fa-pencil mr-2"/><a t-att-href="'/my/delete/education/%s' % edu.id" class="fa fa-trash"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </t>
+    </template>
+
 </odoo>

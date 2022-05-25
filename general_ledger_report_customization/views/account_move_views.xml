@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+
+    <!-- <menuitem id="general_ledger_pdf" 
+    name="General Ledger Report" parent="account.menu_print_journal"
+      /> -->
+      <!-- <menuitem id="general_ledger_pdf"
+       name="Report Ledger" 
+       parent="account_reports.account_reports_partners_reports_menu" 
+       sequence="22"/> -->
+       <menuitem id="ggg" name="GG REpoo"  parent="account.account_reports_management_menu" groups="analytic.group_analytic_accounting"/>
+       
+    
+</odoo>

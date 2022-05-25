@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+
+    <div t-name="gvp.publication_form" class="form-group">
+        <label for="myPublication">Publication</label>
+        <select class="w-75" id="myPublication" name="publication" multiple="True">
+            <t t-foreach="publications" t-as="publication">
+            <option t-if="partner_publication.includes(publication.id)" t-att-value="publication.id" selected="True"><t t-esc="publication.title"/></option>
+            <option t-else="" t-att-value="publication.id"><t t-esc="publication.title"/></option>
+            </t>
+        </select>
+    </div>
+
+    <div t-name="gvp.my_publication" class="row publication_container">
+        <t t-foreach="publications" t-as="publication" t-if="publication != ''">
+            <h4 class="mr4">
+                <span class="badge badge-secondary">
+                    <a t-if="myDetails" href="#" class="fa fa-sm fa-remove badge-secondary o_alumni_remove_publication" role="button" aria-label="Remove" title="Remove" />
+                    <t t-esc="publication" />
+                </span>
+            </h4>
+        </t>
+    </div>
+
+</templates>

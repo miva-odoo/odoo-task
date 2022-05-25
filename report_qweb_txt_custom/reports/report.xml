@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale_order_report_custom" model="ir.actions.report">
+        <field name="name">Sale(ZPL)</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-text</field>
+        <field name="report_name">report_qweb_txt_custom.report_sale_order_txt</field>
+        <field name="report_file">report_qweb_txt_custom.report_sale_order_txt</field>
+        <field name="binding_model_id" ref="model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="account_move_report_custom" model="ir.actions.report">
+        <field name="name">SALES INVOICE(ZPL)</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-text</field>
+        <field name="report_name">report_qweb_txt_custom.sale_invoice_template_text</field>
+        <field name="report_file">report_qweb_txt_custom.sale_invoice_template_text</field>
+        <field name="binding_model_id" ref="model_account_move"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="account_move_report_return_custom" model="ir.actions.report">
+        <field name="name">SALES RETURN(ZPL)</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-text</field>
+        <field name="report_name">report_qweb_txt_custom.sale_invoice_return_template_text</field>
+        <field name="report_file">report_qweb_txt_custom.sale_invoice_return_template_text</field>
+        <field name="binding_model_id" ref="model_account_move"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

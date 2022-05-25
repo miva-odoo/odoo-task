@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="sale_invoice_template_text">
+    ID|Number|Invoice/Bill Date|Invoice Partner Display Name|Partner/Street|Partner/Street2|Partner/City|Partner/TIN Number|GSTIN|Partner/Mobile|Partner/Email|GST Treatment|Invoice Lines/Product/Barcode|Invoice Lines/Prosuct|Invoice Lines/Unit Of Measure|Invoice Lines/Currency|Invoice Lines/Quantity|Invoice Lines/Unit Price|Invoice Lines/Total|Invoice lines/Product/HSN/SAC Code|Invoice lines/Taxes<t t-foreach="docs" t-as="o">
+    <t t-esc="o.id"/>|<t t-esc="o.name"/>|<t t-esc="o.invoice_date"/>|<t t-esc="o.partner_id.name"/>|<t t-esc="o.partner_id.street"/>|<t t-esc="o.partner_id.street2"/>|<t t-esc="o.partner_id.city"/>|<t t-esc="o.l10n_in_gstin"/>|<t t-esc="o.partner_id.mobile"/>|<t t-esc="o.partner_id.email"/>|<t t-esc="o.l10n_in_gst_treatment"/>|<t t-esc="o.invoice_line_ids.product_id.barcode"/>|<t t-esc="o.invoice_line_ids.product_id.name"/>|<t t-esc="o.invoice_line_ids.product_uom_id.name"/>|<t t-esc="o.invoice_line_ids.currency_id.name"/>|<t t-esc="o.invoice_line_ids.quantity"/>|<t t-esc="o.invoice_line_ids.price_unit"/>|<t t-esc="o.invoice_line_ids.price_subtotal"/>|<t t-esc="o.invoice_line_ids.product_id.l10n_in_hsn_code"/>|<t t-esc="o.invoice_line_ids.tax_ids"/></t>
+    </template>
+</odoo>

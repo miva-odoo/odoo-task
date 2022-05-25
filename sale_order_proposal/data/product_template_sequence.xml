@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <data>
+         <!--
+        product template Sequences
+        -->
+        <record id="sale_proposal_template_seq" model="ir.sequence">
+            <field name="name">Sale Proposal</field>
+            <field name="code">sale.proposal</field>
+            <field name="prefix">SP</field>
+            <field name="padding">5</field>
+            <field eval="False" name="company_id"/>
+        </record>
+        
+    </data>
+
+</odoo>

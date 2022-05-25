@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="custom_report_xls" model="ir.actions.report">
+        <field name="name">Custom Report XLSX</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">custom_xlsx_report_for_sale.custom_report_testing_xls</field>
+        <field name="report_file">custom_xlsx_report_for_sale.custom_report_testing_xls</field>
+        <field name="binding_model_id" ref="model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+</odoo>

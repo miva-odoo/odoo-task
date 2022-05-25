@@ -17,7 +17,7 @@
  'data': [
      'views/product_category_view.xml',
     #  'views/product_template_view.xml',
-     'data/product_template_sequence.xml',
+     'data/library_library_sequence.xml',
      
  ],
 

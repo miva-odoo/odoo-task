@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <div t-name="gvp.skills_form" class="form-group">
+        <label for="mySkills">Skills test:</label>
+        <select class="w-75" id="mySkills" name="skills" multiple="True">
+            <t t-foreach="skills" t-as="skill">
+            <option t-if="partner_skills_ids.includes(skill.id)" t-att-value="skill.id" selected="True"><t t-esc="skill.name"/></option>
+            <option t-else="" t-att-value="skill.id"><t t-esc="skill.name"/></option>
+            </t>
+        </select>
+    </div>
+
+    <div t-name="gvp.my_skills" class="row skills_container">
+        <t t-foreach="partner_skills" t-as="skill" t-if="skill != ''">
+            <h4 class="mr4">
+                <span class="badge badge-secondary">
+                    <a t-if="myDetails" href="#" class="fa fa-sm fa-remove badge-secondary o_alumni_remove_skill" role="button" aria-label="Remove" title="Remove" />
+                    <t t-esc="skill" />
+                </span>
+            </h4>
+        </t>
+    </div>
+</templates>

@@ -7,7 +7,7 @@
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">custom_report_for_sale_order.custom_report_testing</field>
         <field name="report_file">custom_report_for_sale_order.custom_report_testing</field>
-        <field name="binding_model_id" ref="model_sale_order"/>
+        <field name="binding_model_id" ref="model_sale_9order"/>
         <field name="binding_type">report</field>
     </record>
     

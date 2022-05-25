@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="mrp_production">
+        <t t-foreach="docs" t-as="testing">
+            <t t-call="web.html_container">
+                <t t-call="web.basic_layout">
+                    
+                    <table border="1" style="width:100%;font-size:14px;">
+                    
+                        <tr>
+                            <th class="text-center" colspan="12">
+                                <h5>
+                                    <b> TXST &#38; CONFORMITY CERTIFICATE </b>
+                                </h5>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="text-center" colspan="12"> According to EN 10204-2.2  </th>
+                        </tr>
+                        <tr>
+                            <td colspan="12" style="height:27px;"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"> <b> Customer :- </b> </th>
+                            <td colspan="10"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"> <b> Address :- </b> </th>
+                            <td colspan="10"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="text-center"> <b> Certificate No. </b> </th>
+                            <th colspan="3" class="text-center"> <b> Certificate Date. </b> </th>
+                            <th colspan="2" class="text-center"> <b> Our Referance </b> </th>
+                            <th colspan="3" class="text-center"> <b> Customer's Ref &#38; Date </b> </th>
+                            <th colspan="1" class="text-center"> <b> Sheet </b> </th>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="height:27px;"></td>
+                            <td colspan="3" style="height:27px;"></td>
+                            <td colspan="2" style="height:27px;"></td>
+                            <td colspan="3" style="height:27px;"></td>
+                            <td colspan="1" style="height:27px;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="12" style="height:27px;"></td>
+                        </tr>
+                    
+                        <tr>
+                            <th colspan="2"> <b> Product Name :- </b> </th>
+                            <td colspan="10"></td>
+                        </tr>
+    
+                        <tr>
+                            <th class="text-center" colspan="12"> <b> Product Specifications     </b> </th>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> Model </th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> Model description</th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> Dial size </th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> Accuracy </th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> Mounting pattern </th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> Process Connection </th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> Execution </th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> Bourden tube &#38; shank </th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> Ingress protection </th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="5"> <b> Standard Parameters </b> </th>
+                            <td colspan="1"></td>
+                            <td colspan="6"></td>
+                        </tr>
+    
+                    </table>
+                    <table border="1" style="width:100%;font-size:14px;">
+                   
+                        <tr>
+                            <th colspan="1" class="text-center"> <b> Sr No. </b> </th>
+                            <th colspan="3" class="text-center"> <b> Tag Number </b> </th>
+                            <th colspan="3" class="text-center"> <b> Range </b> </th>
+                            <th colspan="3" class="text-center"> <b> Instrument No </b> </th>
+                            <th colspan="2" class="text-center"> <b> Quantity </b> </th>
+                        </tr>
+                        <tr>
+                            <td colspan="1" style="height:27px;"></td>
+                            <td colspan="3" style="height:27px;"></td>
+                            <td colspan="3" style="height:27px;"></td>
+                            <td colspan="3" style="height:27px;"></td>
+                            <td colspan="2" style="height:27px;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="12" style="height:27px;"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="12"> <b> Calabration &#38; Traceability :- </b> </th>
+                        </tr>
+                        <tr> 
+                            <th colspan="12">
+                                The above instrument are tested / calibrated for the tests such as performance, visual, dimensional &#38;
+                                Accuracy Against the standard Master instrument which are Traceable to national &#38; international Standard.<br/><br />
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="12"> <b> Warranty :- </b> </th>
+                        </tr>
+                        <tr> 
+                            <th colspan="12">
+                                <br />
+                                The TGI Product's Warranty for a period of 12 months from the date of certificate date or invoice date,
+                                Whichever is earlier,for manufacturing defects only. 'TGI' reserves the right of repair or replace the 
+                                defective parts or in full depending on the nature of defect &#38; observations.
+                            </th>
+                        </tr>
+    
+                    </table>
+    
+                    <table border="1" style="width:100%;font-size:14px;">
+    
+                        <tr>
+                            <th colspan="2" class="text-center"> <b> PREPARED BY </b> </th>
+                            <th colspan="4" class="text-center"> <b> CHECKED BY </b> </th>
+                            <th colspan="3" class="text-center"> <b> AUTHORIZED BY </b> </th>
+                            <th colspan="3" class="text-center"> <b> SEAL </b> </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height:71px;"></td>
+                            <td colspan="4" style="height:71px;"></td>
+                            <td colspan="3" style="height:71px;"></td>
+                            <td colspan="3" style="height:71px;"></td>
+                        </tr>
+    
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+    
+</odoo>

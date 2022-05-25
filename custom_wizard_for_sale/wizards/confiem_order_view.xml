@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+     <!--wizard for confirm order -->
+
+     <record id="confirm_wizard_form_view" model="ir.ui.view">
+        <field name="name">Confirm Wizard form</field>
+        <field name="model">confirm.order</field>
+        <field name="arch" type="xml">
+            <form string="Create New Wizard">
+                <group>
+                    <b><h3>Are You Sure Confirm this Order ?</h3></b>
+                    <!-- <field name="sale_order_id" /> -->    
+                    
+                </group>
+                <footer>
+                    <button name="action_confirm_wizard" string="Confirm" type="object" class="btn-primary"/>
+                    <!-- <button name="action_report_print" string="Print Report" type="object" class="btn-primary"/> -->
+                    <button string="cancel" class="btn-secondary" special= "cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+   
+       
+        <record id="action_confirm_wizard_action" model="ir.actions.act_window">
+            <field name="name">Confirm Wizard</field>
+            <field name="res_model">confirm.order</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="confirm_wizard_form_view"/>
+            <field name="target">new</field>
+            
+        </record>
+
+       
+</odoo>
